@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 39</title>
+
+    <style>
+        
+        #carro {
+            width: 250px;
+            height: 600px;
+        }
+
+        .c1 {
+            background-image: url("imgs2/c1.png");
+        }
+
+        .c2 {
+            background-image: url("imgs2/c2.png");
+        }
+
+        .c3 {
+            background-image: url("imgs2/c3.png");
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <button onclick="trocaCarro(1)"> Carro 1 </button>
+    <button onclick="trocaCarro(2)"> Carro 2 </button>
+    <button onclick="trocaCarro(3)"> Carro 3 </button>
+    <button onclick="removeCarro()"> Remover carro </button>
+    <button onclick="verifica()"> Verifica </button>
+    <div id="carro"></div>
+
+
+    <script>
+
+        function trocaCarro(c) {
+            // setAttribute PARA SETAR UM ATRIBUTO => ("Atributo", "Valor do atributo")
+            var obj = document.getElementById("carro")
+
+            if (c == 1) {
+                obj.setAttribute("class", "c1")
+            } else if (c == 2) {
+                obj.setAttribute("class", "c2")
+            } else if (c == 3) {
+                obj.setAttribute("class", "c3")
+            }
+        }
+
+        function removeCarro() {
+            var obj = document.getElementById("carro")
+            obj.removeAttribute("class")
+        }
+
+        function verifica() {
+            var obj = document.getElementById("carro")
+
+            if (obj.hasAttribute("class")) {
+                alert(`Possui a classe`)
+            } else {
+                alert(`Não possui a classe`)
+            }
+        }
+    
+    </script>
+
+</body>
+
+</html>

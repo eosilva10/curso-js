@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 36</title>
+
+    <style>
+        
+        #jogador {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #00f;
+            width: 50px;
+            height: 50px;
+        }
+
+        button {
+            margin-top: 50px;
+        }
+
+    </style>
+
+<script>
+///// DESAFIO!!!
+
+    var valor = 0
+    var valora = 0
+    var valorb = 0
+
+    var jog 
+    var velo
+    // VARIAVEIS DE DIREÇAO
+    var direx
+    var direy
+    // VARIAVEIS DE POSIÇAO
+    var posx
+    var posy
+
+    var anima
+
+    function iniciar() {
+        velo = 3
+        direx = 1
+        direy = 0
+        posx = 0
+        posy = 0
+        jog = document.getElementById("jogador")
+        // jog.addEventListener("click", function(){
+        //     cancelAnimationFrame(anima)
+        // }) 
+
+        document.getElementById("btn_inicio").addEventListener("click", function() {
+            game()
+            valora += 1
+            console.log(valora)
+        })
+        document.getElementById("btn_parar").addEventListener("click", function() {
+            cancelAnimationFrame(anima)
+            valorb += 1
+            console.log(valorb)
+        })
+        
+        jog.addEventListener("click", function(){
+            valor += 1
+
+            if (valor % 2 == 0) {
+                cancelAnimationFrame(anima)
+            } else {
+                game()
+            }
+
+            console.log(valor)
+        })    
+
+    function game() {
+
+        posx += direx * velo
+        // posy += direy * velo
+        jog.style.left = posx + "px"
+        // jog.style.top = posy + "px"
+
+        if (posx > 600) {
+            direx = -1
+        } else if (posx < 0) {
+            direx = 1
+        }
+
+        anima = requestAnimationFrame(game)
+    }
+}
+
+    window.addEventListener("load", iniciar)
+    
+</script>
+    
+</head>
+<body>
+    
+    <div id="jogador"></div>
+    <button id="btn_inicio">Iniciar</button>
+    <button id="btn_parar">Parar</button>
+
+</body>
+
+</html>

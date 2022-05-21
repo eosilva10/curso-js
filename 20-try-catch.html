@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 20</title>
+
+    <script>
+
+        // try { // try VERIFICA SE HÁ ALGUM ERRO NO BLOCO DE CÓDIGO
+        //     document.writ("=> MENSAGEM TESTE")
+        // } catch (e) { // catch CAPTURA O TypeError EM UM PARÂMETRO
+        //     document.write("Ocorreu um erro! Aperte F12 para analisa-lo")
+        //     console.log("=> Mensagem de erro: " + e.message)
+        // }   
+
+        try {
+
+            numero = prompt("Digite um valor menor que 15: ")
+            if (numero > 15) {
+                throw new Error("Valor maior que 15 invalido!") // GERA UM TIPO DE ERRO MANUALMENTE
+            } else {
+                document.write("Valor " + numero + " aceito!")
+            }
+
+        } catch (error) {
+            document.write(error.message)
+        } finally {
+            document.write("<hr>Fim do teste") // GERA UMA AÇÃO COM OU SEM O ERRO ACONTECER
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

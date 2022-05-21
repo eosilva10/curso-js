@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 42</title>
+
+    <style>
+        
+
+
+    </style>
+    
+</head>
+<body>
+    
+    <p id="txt"> Teste - Curso de Javascript - Curso de HTML - curso de javascript </p>
+    <p id="txt2"> Teste - Curso de Javascript - Curso de HTML - curso de javascript </p>
+    <hr>
+
+    <script>
+
+        var texto1 = document.getElementById(`txt`).innerHTML
+        var texto2 = document.getElementById(`txt2`).innerHTML
+
+        // indexOf RETORNA A POSIÇÃO DO CARACTERE DESEJADO (CASE SENSITIVE!!)
+        // CASO O CARACTERE NÃO SEJA ENCONTRADO, O MÉTODO RETORNA -1
+        var res1 = texto1.indexOf(`T`)
+        var res2 = texto1.lastIndexOf(`T`)
+
+        if (res1 < 0) {
+            document.write(`Letra não encontrada`)
+        } else {
+            document.write(`Valor buscado indexOf: ${res1} // Valor buscado lastIndexOf: ${res2}`)
+        }
+
+        document.write(`<hr>`)
+
+        // localeCompare -> RETORNA 0 QUANDO AS STRINGS SÃO IGUAIS // E RETORNA -1 QUANDO SÃO DIFERENTES
+        var compara = texto1.localeCompare(texto2)
+        
+        if (compara == 0) {
+            document.write(`localeCompare: ${compara} // Strings são iguais!`)
+        } else {
+            document.write(`localeCompare: ${compara} // Strings diferentes!`)
+        }
+
+        document.write(`<hr>`)
+
+        // slice CORTA UM PEDAÇO DA STRING, USA DOIS PARAMETROS (x, y)
+        // -> PARAMETRO x É A POSIÇÃO QUE INICIA O CORTE
+        // -> PARAMETRO y É A POSIÇÃO QUE TERMINA O CORTE
+        var corte = texto1.slice(0, 6)
+        
+        document.write(corte)
+
+        document.write(`<hr>`)
+
+        // toLowerCase CONVERTE TODOS OS CARACTERES DA STRING EM MINUSCULAS(CAIXA BAIXA)
+        document.write(texto1.toLowerCase())
+        document.write(`<br>`)
+        // toUpperCase CONVERTE TODOS OS CARACTERES DA STRING EM MAIUSCULAS(CAIXA ALTA)
+        document.write(texto1.toUpperCase())
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 55</title>
+
+    <style>
+
+        
+
+    </style>
+
+</head>
+
+<script>
+
+    function mudarPgn() {
+        // A PROPRIEDADE location.assign ALTERA A PROPRIEDADE DA URL INSTANTANEAMENTE
+        location.assign(`https://www.google.com.br`)
+
+        // A PROPRIEDADE location.replace TAMBEM ALTERA A URL, POREM NÃO OFERECE A OPÇÃO DE VOLTAR A PAGINA ANTERIOR
+        // location.replace(`https://www.google.com.br`)
+    }
+
+    function recarregaPgn() {
+        // A PROPRIEDADE reload RECARREGA A PAGINA
+        location.reload()
+    }
+
+</script>
+
+<body>
+
+    <h1> Objeto Location </h1>
+    <hr>
+    <button onclick="mudarPgn()"> Mudar a pagina </button>
+    <button onclick="recarregaPgn()"> Recarregar a pagina </button>
+
+</body>
+
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 32</title>
+
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgb(74, 9, 128);
+            background-color: white;
+            position: absolute;
+            left: 0;
+            top: 0
+        }
+    </style>
+
+
+    
+</head>
+<body>
+    
+    <div id="div1"></div>
+
+</body>
+
+<script>
+
+    var px = 0// VARIAVEL PRO DESLOCAMENTO DO EIXO X
+    var py = 0// VARIAVEL PRO DESLOCAMENTO DO EIXO Y / !!! LADO NEGATIVO PARA CIMA E POSITIVO PARA BAIXO !!!
+
+    // function mover() {
+    //     var obj = document.getElementById("div1")
+    //     var tecla = event.keyCode // keyCode RETORNA O CÓDIGO DA TECLA PRESSIONADA
+    //     // COD. TECLAS => 37=ESQUERDA / 38=CIMA / 39=DIREITA / 40=BAIXO / 13=ENTER
+    //     if (tecla == 37) {
+    //         px -= 30
+    //         obj.style.left = px + "px" 
+    //     } else if (tecla == 38) {
+    //         py -= 30
+    //         obj.style.top = py + "px"
+    //     } else if (tecla == 39) {
+    //         px += 30
+    //         obj.style.left = px + "px"
+    //     } else if (tecla == 40) {
+    //         py += 30
+    //         obj.style.top = py + "px"
+    //     } else if (tecla == 13) {
+    //         alert(`Evento keydown removido!`)
+    //         document.removeEventListener("keydown", mover) // removerEventListener REMOVE OS EVENTOS
+    //     } 
+
+    // }
+
+    // document.addEventListener("keydown", mover)
+
+    ///// DESAFIO!!
+
+    function ligar() {
+        alert(`Evento keydown acionado! Aperte Enter para desativar`)
+        var obj = document.getElementById("div1")
+        obj.style.backgroundColor = "rgb(105, 59, 230)"
+        document.addEventListener("keydown", mover) 
+    }
+
+    function mover() {
+        var obj = document.getElementById("div1")
+        var tecla = event.keyCode // keyCode RETORNA O CÓDIGO DA TECLA PRESSIONADA
+        // COD. TECLAS => 37=ESQUERDA / 38=CIMA / 39=DIREITA / 40=BAIXO / 13=ENTER
+        if (tecla == 37) {
+            px -= 30
+            obj.style.left = px + "px" 
+        } else if (tecla == 38) {
+            py -= 30
+            obj.style.top = py + "px"
+        } else if (tecla == 39) {
+            px += 30
+            obj.style.left = px + "px"
+        } else if (tecla == 40) {
+            py += 30
+            obj.style.top = py + "px"
+        } else if (tecla == 13) {
+            alert(`Evento keydown removido! Clique novamente para acionar`)
+            obj.style.backgroundColor = "white"
+            document.removeEventListener("keydown", mover) // removerEventListener REMOVE OS EVENTOS
+        } 
+
+    }
+
+    document.getElementById("div1").addEventListener("click", ligar)
+
+
+</script>
+
+</html>

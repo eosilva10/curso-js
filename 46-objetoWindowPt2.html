@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 46</title>
+
+    <style>
+
+        #painel {
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 15px;
+            width: 170px;
+            height: 100px;
+        }
+
+    </style>
+
+</head>
+
+<script>
+
+    var l, a, px, py, painel
+
+    function info() {
+    // OBTENDO A LARGURA INTERNA DA JANELA E PASSANDO PRA VARIAVEL
+    l = window.innerWidth
+    // OBTENDO A ALTURA INTERNA DA JANELA E PASSANDO PRA VARIAVEL      
+    a = window.innerHeight
+    // OBTENDO A POSIÇÃO DO EIXO X DA JANELA NO MONITOR E PASSANDO PRA VARIAVEL
+    px = window.screenX
+    // OBTENDO A POSIÇÃO DO EIXO Y DA JANELA NO MONITOR E PASSANDO PRA VARIAVEL      
+    py = window.screenY
+        painel.innerHTML = "Largura: " + l + " Altura: " + a + "<br>Posiçao x: " + px + "<br>Posiçao y: " + py
+    }
+
+    function inicia() {
+        painel = document.getElementById("painel")
+    }
+
+    window.addEventListener("load", inicia)
+ 
+</script>
+
+<body>
+
+    <button onclick="info()"> Tamanho </button>
+    
+    <div id="painel"></div>
+
+</body>
+
+
+</html>

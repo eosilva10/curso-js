@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 26</title>
+
+    <script>
+
+        let dt = new Date()
+
+        let dia = dt.getDate() // MÉTODO QUE RETORNA O DIA 
+        let diasSemana = dt.getDay() // MÉTODO QUE RETORNA O DIA DA SEMANA(DOMINGO - 0 / SEGUNDA - 1) 
+        let mes = dt.getMonth() // MÉTODO QUE RETORNA O MÊS(JANEIRO - 0 / FEVEREIRO - 1) 
+        let ano = dt.getFullYear() // MÉTODO QUE RETORNA O ANO 
+
+        let horas = dt.getHours() // MÉTODO QUE RETORNA A HORA
+        let minutos = dt.getMinutes() // MÉTODO QUE RETORNA OS MINUTOS
+        let segundos = dt.getSeconds() // MÉTODO QUE RETORNA A HORA
+
+        let nomeMeses = ["Janeiro", "Fevereiro",  
+        "Março", "Abril",
+        "Maio", "Junho",
+        "Julho", "Agosto",
+        "Setembro", "Outubro",
+        "Novembro", "Dezembro"]
+
+        let nomeSemanas = ["Domingo", "Segunda-Feira", "Terça-Feira",  
+        "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sabado"]
+
+        document.write(`Data atual: ${nomeSemanas[diasSemana]} ${dia}/${nomeMeses[mes]}/${ano}`) // PASSANDO OS INDICES DOS VETORES COM NOMES PARA OS METODOS 
+        document.write("<hr>")
+        document.write(`${horas} Horas / ${minutos} Minutos / ${segundos} Segundos`)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

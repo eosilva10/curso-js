@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 48</title>
+
+    <style>
+
+        
+
+    </style>
+
+</head>
+
+<script>
+
+    function inicia() {
+        var qtd_frames = window.length
+        var painel = document.getElementById("painel").innerHTML = qtd_frames
+        for (i = 0; i < qtd_frames; i++) {
+            window.frames[i].location="imgs2/c1.png"
+        }
+    }
+
+    window.addEventListener("load", inicia)
+ 
+</script>
+
+<body>
+
+    <iframe src="">  </iframe>
+    <iframe src="">  </iframe>
+    <iframe src="">  </iframe>
+
+    <div id="painel">  </div>
+
+</body>
+
+
+</html>

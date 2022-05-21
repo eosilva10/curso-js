@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 41</title>
+
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    
+    <p id="txt"> Teste - Curso de Javascript - Curso de HTML - curso de javascript </p>
+    <p id="txt2"> Teste - Curso de MySQL - Curso de Git - curso de Angular </p>
+
+    <script>
+
+        let texto = document.getElementById("txt").innerHTML
+        let texto2 = document.getElementById("txt2").innerHTML
+
+        // search RETORNA A POSIÇÃO QUE SE INICIA O VALOR BUSCADO
+        let res = texto.search(/teste/i)
+
+        // replace ALTERA A PRIMEIRA OCORRÊNCIA ENCONTRADA
+        let res2 = texto.replace(/javascript/i, "PHP")
+
+        // chartAt RETORNA O CARACTERE DE UMA POSIÇÃO DESEJADA
+        let res3 = texto.charAt(1)
+
+        // concat  FAZ A CONCATENAÇÃO(JUNTA) UM OU MAIS VALORES
+        let concatena = texto.concat("/ " + texto2)
+
+        document.write(res + "<hr>")
+        document.write(res2 + "<hr>")
+        document.write(res3 + "<hr>")
+        document.write(concatena)
+
+    </script>
+
+</body>
+
+</html>

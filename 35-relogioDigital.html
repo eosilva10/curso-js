@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 35</title>
+
+    <style>
+        #rel {
+            text-align: center;
+            color: #0f0;
+            font-weight: bold;
+            font-size: 30px;
+            width: 130px;
+            background-color: #000;
+        }
+    </style>
+
+<script>
+
+    function relogio() {
+        var data = new Date()
+        var horas = data.getHours()
+        var minutos = data.getMinutes()
+        var segundos = data.getSeconds()
+
+        if (horas < 10 ) {
+            horas = "0" + horas
+        } else if (minutos < 10 ) {
+            minutos = "0" + minutos
+        } else if (segundos < 10 ) {
+            segundos = "0" + segundos
+        }
+
+        var formatada = horas + ":" + minutos + ":" + segundos
+        document.getElementById("rel").value = formatada
+    }
+
+    var tempo = setInterval(relogio, 1000)
+
+</script>
+    
+</head>
+<body>
+    
+    <input type="text" id="rel">
+
+</body>
+
+</html>

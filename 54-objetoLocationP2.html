@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 54</title>
+
+    <style>
+
+        * {
+            background-color: rgb(189, 193, 197);
+        }
+
+    </style>
+
+</head>
+
+<script>
+
+    // location.hash RETORNA O CONTEUDO DA #
+    var aux = location.hash
+    document.write(`Conteudo da url hash: ${aux} <hr>`)
+
+    // location.search RETORNA O CONTEUDO DA ?
+    var aux2 = location.search
+    document.write(`Conteudo da url search: ${aux2} <hr>`)
+
+    // location.host OU location.hostname RETORNA O HOST DA APLICAÇÃO
+    // SE A APLICAÇÃO ESTIVER SENDO ABERTA LOCALMENTE NÃO IRÁ RETORNAR RESULTADO
+    // TESTAR EM CONSOLES DE PAGINAS WEB
+    var host = location.host
+    document.write(`Host: ${host} <hr>`)
+
+    // location.href RETORNA A URL DA PAGINA, PODENDO ALTERA-LA
+    var url = location.href
+    document.write(`Url: ${url} <hr>`) 
+
+    // ALTERANDO A URL DA PAGINA
+    // var url = location.href = "https://www.google.com.br"
+
+    // A PROPRIEDADE origin RETORNA O PROTOCOLO, O HOST E A PORTA 
+    var orig = location.origin
+    document.write(`Origem: ${orig}`)
+
+</script>
+
+<body>
+
+    <h1> Pagina 2 - Aula 54 </h1>
+    <hr>
+    <a href="54-objetoLocationP1.html"> Home </a>
+    <hr><hr>
+
+</body>
+
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 59</title>
+
+    <style>
+
+    </style>
+
+    <script>
+
+        function inicia() {
+            document.getElementById("btnDestaca").addEventListener("click", function() {
+            
+            var num = document.getElementById("inputNum").value
+            var p = document.getElementsByTagName("p")
+
+            // FAZENDO UM LOOP PARA REMOVER OS ATRIBUTOS DO VETOR DAS TAGS p    
+            for (i = 0; i < p.length; i++) {
+                p[i].removeAttribute("style") // removeAttribute REMOVE O ATRIBUTO DO OBJETO SELECIONADO 
+            }
+            
+            // CRIANDO O ATRIBUTO style PARA REALIZAR FORMATAÇÕES
+            var at = document.createAttribute("style")
+            // ATRIBUINDO AS FORMATAÇÕES PARA O OBJETO CRIADO
+            at.value = "color: #F00; font-family: Segoe UI"
+            // ATRIBUINDO OS VALORES DO OBJETO CRIADO EM UM DOS ITES DO ARRAY DA TAG p USANDO O setAttributeNode
+            p[num].setAttributeNode(at)
+            })
+        }
+
+        window.addEventListener("load", inicia)
+
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="inputNum">
+    <button id="btnDestaca"> Destacar </button>
+    <hr>
+
+    <p> Curso de HTML </p>
+    <p> Curso de CSS </p>
+    <p> Curso de Javasccript </p>
+    <p> Curso de PHP </p>
+    <p> Curso de Ruby </p>
+    <p> Curso de Java </p>
+    <p> Curso de Node JS </p>
+    <p> Curso de C++ </p>
+
+</body>
+</html>

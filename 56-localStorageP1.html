@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 56</title>
+
+    <style>
+
+    </style>
+
+    <script>
+
+        // MÉTODO setItem INSERE UM ITEM NO localStorage DO NAVEGADOR PASSANDO UMA CHAVE E UM VALOR RESPECTIVAMENTE
+        // UMA VEZ ADICIONADO, O ITEM FICARA NA storage MESMO FECHANDO A APLICAÇÃO, E SÓ SERÁ REMOVIDO MANUALMENTE
+        localStorage.setItem("Tênis", "Air Max 90")
+
+        // MÉTODO removeItem REMOVE O ITEM DO localStorage, SOMENTE DESCREVENDO A CHAVE JA É SUFICIENTE
+        // localStorage.removeItem("Tênis")
+
+        // MÉTODO getItem PEGA O CONTEUDO DO localStorage, SOMENTE A CHAVE JA RETORNA O VALOR
+        var conteudo = localStorage.getItem(`Tênis`) // OU var conteudo = var conteudo = localStorage.Tênis 
+        document.write(conteudo)
+
+        document.write(`<hr>`)
+
+        // -- // --
+
+        function insere() {
+            localStorage.setItem("Smartphone", "Xperia")
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="inputValor">
+    <button onclick="insere()"> Inserir produto </button>
+
+</body>
+</html>

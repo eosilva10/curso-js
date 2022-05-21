@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 28</title>
+
+    <script>
+
+        // FUNÇÃO SEM PARAMETRO
+        // function apresentaçao() {
+        //     document.write("Curso de Javascript!")
+        // }
+
+        // apresentaçao()
+
+        // FUNÇÃO COM PARAMETRO
+        // function soma(x, y) {
+        //     let res = x + y
+        //     document.write(res)
+        // }    
+
+        // soma(6, 8)
+
+        // FUNÇÃO COM RETORNO
+        // function multiplicaçao(x, y) {
+        //     return x * y 
+        // }
+
+        // document.write(multiplicaçao(3, 4))
+
+        let numeros = [2, 6, 4, 9, 8, 1, 5]
+
+        function media(nums) {
+            let tamanho = nums.length
+            let soma = 0
+
+            for (i = 0; i < tamanho; i++) {
+                soma += nums[i]
+            }
+            return Math.round(soma/tamanho)
+        }
+
+        document.write(media(numeros))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

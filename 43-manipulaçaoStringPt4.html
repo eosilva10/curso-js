@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 43</title>
+
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    
+    <p id="txt"> Teste - Curso de Javascript - Curso de HTML - curso de javascript </p>
+    <hr>
+
+    <script>
+
+        var texto1 = document.getElementById(`txt`).innerHTML
+
+        var num = 19
+        // toString FAZ A CONVERSÃO DE UM NUMÉRICO EM STRING
+        document.write(num.toString() + "<hr>")
+        // toString também converte bases(binaria, octal e hexadecimal)
+        document.write(`Numero ${num} em base binaria: ${num.toString(2)} <br>`)
+        document.write(`Numero ${num} em base octal: ${num.toString(8)} <br>`)
+        document.write(`Numero ${num} em base hexadecimal: ${num.toString(16)} <br>`)
+
+        document.write(`<hr>`)
+
+        //trim ELIMINA ESPAÇOS ANTES E DEPOIS DA STRING
+        var texto2 = `        Exemplo de método Trim   `
+        alert(texto2)
+        var res = texto2.trim()
+        alert(res)
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 33</title>
+
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgb(74, 9, 128);
+            background-color: white;
+        }
+    </style>
+
+<script>
+
+    var tempo
+
+    function mudaCor() {
+        var obj = document.getElementById("div1")
+        // PARA GERAR CORES ALEATÓRIAS, VAMOS CRIAR UMA VARIAVEL PRA CADA COR (RGB)
+        var r = Math.floor(Math.random()*255) // Math.floor PARA ARREDONDAR O NUMERO PARA INTEIRO 
+        var g = Math.floor(Math.random()*255)
+        var b = Math.floor(Math.random()*255)
+        obj.style.backgroundColor="rgb("+r+","+g+","+b+")"
+    }
+
+    // window.addEventListener("load", mudaCor)
+
+    // setTimeOut ACIONA UMA FUNÇÃO APOS UM TEMPO DETERMINADO (nomeFunção, tempo em milis.)
+    // var tempo = setTimeout(mudaCor, 2000)
+
+    // setInterval REPETE! UMA FUNÇÃO DE ACORDO COM UM INTERVALO
+    // var tempo = setInterval(mudaCor, 2000) 
+
+    function iniciar() {
+        tempo = setInterval(mudaCor, 1000)
+    }
+
+    function parar() {
+        clearInterval(tempo) // clearInterval INTERROMPE O PROCESSO DO setInterval
+    }
+
+    function adicionarEventos() {
+        document.getElementById("btn1").addEventListener("click", iniciar)
+        document.getElementById("btn2").addEventListener("click", parar)
+    }
+
+    window.addEventListener("load", adicionarEventos)
+
+</script>
+    
+</head>
+<body>
+    
+    <div id="div1"></div>
+    <br>
+    <button id="btn1"> Iniciar </button>
+    <button id="btn2"> Parar </button>
+
+</body>
+
+</html>

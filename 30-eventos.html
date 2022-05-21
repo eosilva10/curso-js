@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 30</title>
+
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            border: 2px solid blue;
+        }
+    </style>
+
+</head>
+<body onload="ola()"> <!-- EVENTO AO CARREGAR A PAGINA -->
+
+    <div id="div1" onmouseover="mudaCor(this, '#836FFF')" onmouseout="mudaCor(this, 'white')"></div>
+    <!-- OU <div id="div1" onmouseover="mudaCor(document.getElementById('div1'), '#836FFF')" </div> --> 
+    <br>
+    <button onclick="alert('Parabéns vc clicou!')" onmouseover="mudaPos(this)">Clique em mim</button>
+    
+</body>
+
+
+<script>
+
+    function mudaCor(obj, cor) {
+        obj.style.backgroundColor = cor
+    }    
+    
+    function mudaPos(obj) {
+        obj.style.position = "absolute"
+        obj.style.left = Math.random()*500+"px"
+        obj.style.top = Math.random()*500+"px"
+    }
+
+    function ola() {
+        var data = new Date()
+        var hora = data.getHours()
+        var txt = ""
+
+        if (hora < 12) {
+            txt = "Bom Dia!"
+        } else if (hora < 18) {
+            txt = "Boa Tarde!"
+        } else {
+            txt = "Boa Noite!"
+        }
+
+        alert(`Olá ${txt}`)
+    }
+
+</script>
+
+</html>

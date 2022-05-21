@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 21</title>
+
+    
+</head>
+<body>
+    
+    <p id="texto"> Texto de exemplo </p>
+
+    <div id="caixa">
+
+    </div>
+
+</body>
+
+<script>
+
+    // !! O body É RENDERIZADO ANTES DO script
+
+    // getElementById RETORNA ELEMENTOS DO HTML PELO id PARA SEREM MANIPULADOS
+    // document.getElementById("texto").style.color="blue"
+    // document.getElementById("texto").style.fontFamily="Calibri"
+
+    // MANIPULANDO O id COM UMA VARIÁVEL FICA MAIS PRÁTICO
+    txt = document.getElementById("texto")
+    txt.style.color = "#3CB371"
+    txt.style.fontSize = "20px"
+    txt.style.fontFamily = "Tahoma"
+
+    cx = document.getElementById("caixa")
+    cx.style.border = "3px solid #3CB371"
+    cx.style.width = "150px"
+    cx.style.height = "150px"
+    cx.style.backgroundColor = "#00FF7F"
+
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 23</title>
+
+</head>
+<body>
+    
+    <h1> AULA TESTE </h1>
+    <h3>Subtitulo de exemplo</h3>
+
+    <p>Curso de Javascript , Curso de Javascript</p><br>
+    <p>Curso de Pyhton , Curso de Pyhton</p><br>
+    <p>Curso de Cobol , Curso de Cobol</p><br>
+
+    <hr>
+
+</body>
+
+<script>
+        // getElementsByTagName RETORNA TODOS OS ELEMENTOS DE ACRODO COM O TAG DESEJADA
+        tagsP = document.getElementsByTagName("p")
+
+        // getElementsByTagName GUARDA AS TAGS SELECIONADAS EM VETORES
+        document.write(tagsP[1].innerHTML) // OU -> tagsP = document.getElementsByTagName("p")[1]
+        tagsP[1].style.color = "red"
+
+</script>
+
+</html>

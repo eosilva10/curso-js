@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 49</title>
+
+    <!-- ABRIR ESSA AULA EM DOIS NAVEGADORES PARA COMPARAR INFORMAÇÕES !!! -->
+
+    <style>
+
+        #painel {
+            width: 500px;
+            height: 400px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+    </style>
+
+</head>
+
+<script>
+
+    var painel
+
+    function verifica() {
+        painel = document.getElementById("painel")
+        // PROPRIEDADE Navigator TRAZ AS INFORMAÇÕES E ATRIBUTOS DO NAVEGADOR 
+        painel.innerHTML = "Nome do browser: " + navigator.appName + "<hr>" +
+         "Versão do browser: " + navigator.appVersion + "<hr>" + 
+         "Habilitação de cookies: " + navigator.cookieEnabled + "<hr>" + 
+         "Idioma: " + navigator.language + "<hr>" + 
+         "Online: " + navigator.onLine + "<hr>" + 
+         "Sistema operacional: " + navigator.platform + "<hr>" +
+         "Engine: " + navigator.product + "<hr>"
+    }
+
+    window.addEventListener("load", verifica)
+ 
+</script>
+
+<body>
+
+    <div id="painel"></div>
+
+</body>
+
+
+</html>

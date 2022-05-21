@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 51</title>
+
+    <style>
+
+        
+
+    </style>
+
+</head>
+
+<script>
+
+var info, btnV, btnA
+    
+    function historicoV() {
+        window.history.back()
+    }
+
+    function historicoA() {
+        window.history.forward()
+    }
+ 
+    function inicia() {
+        btnV = document.getElementById("btnVoltar")
+        btnA = document.getElementById("btnAvançar")
+
+        btnV.addEventListener("click", historicoV)
+        btnA.addEventListener("click", historicoA)
+
+        info = document.getElementById("info")
+        // MÉTODO history RETORNA O HISTÓRICO DAS AÇÕES 
+        info.innerHTML = history.length
+    }
+
+    window.addEventListener("load", inicia)
+
+</script>
+
+<body>
+
+    <h1> Home - Objeto History </h1>
+    <div id="info">  </div>
+
+    <a href="51-objetoHistoryP1.html"> Home </a>
+    <a href="52-objetoHistoryP2.html"> Pagina 2 </a>
+    <a href="53-objetoHistoryP3.html"> Pagina 3 </a> <hr>
+    <button id="btnVoltar" > Voltar </button>
+    <button id="btnAvançar" > Avançar </button>
+
+</body>
+
+
+</html>

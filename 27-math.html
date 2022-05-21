@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 27</title>
+
+    <script>
+
+        let valor = 12
+        let lista = [2, 6, 9, 1, 4, 8, 6]
+
+        let mt = Math.abs(valor) // abs RETORNA O VALOR ABSOULTO(IGNORANDO O SINAL DO NUMERO)
+        let mt_ceil = Math.ceil(valor) // ceil ARREDONDA O NUMERO PRA CIMA
+        let mt_floor = Math.floor(valor) // floor ARREDONDA O NUMERO PRA BAIXO
+        let mt_round = Math.round(valor) // round ARREDONDA PRA CIMA SE FOR > 5 E ARREDONDA PRA BAIXO SE FOR < 5
+        let mt_pow = Math.pow(valor, 2) // pow ELEVA UM NUMERO A UM DETERMINADO VALOR
+        let mt_sqrt = Math.sqrt(valor) // sqrt RETORNA A RAIZ QUADRADA DO VALOR
+        let mt_random = Math.random() // random RETORNA UM VALOR ALEATÓRIO ENTRE 0 E 1
+        let mt_random2 = Math.round(Math.random() * valor) // RETORNANDO UM NUMERO ALEATORIO ATÉ O VALOR DA VARIAVEL
+        let mt_min = Math.min(2, 3, 5, 1, 6)
+        let mt_max = Math.max(2, 3, 5, 1, 6)
+        
+        document.write("Numero absoluto " + mt + "<br>")
+        document.write("Arredonda pra cima " + mt_ceil + "<br>")
+        document.write("Arredonda pra baixo " + mt_floor + "<br>")
+        document.write("Arredondamento padrão " + mt_round + "<br>")
+        document.write("Numero elevado " + mt_pow + "<br>")
+        document.write("Raiz quadrada " + mt_sqrt + "<br>")
+        document.write("Numero aleatório " + mt_random + "<br>")
+        document.write("Numero aleatório " + mt_random2 + "<br>")
+        document.write("Menor numero " + mt_min + "<br>")
+        document.write("Maior numero " + mt_max + "<br>")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 45</title>
+
+</head>
+
+<script>
+
+    // PARA OS BOTÕES SEREM ACIONADOS, A VARIAVEL QUE CONTEM O ENDEREÇO DA JANELA TEM QUE SER GLOBAL
+    var novJanela
+    var novTela    
+
+    // OBJETO WINDOW TRABALHA COM AS JANELAS DO NAVEGADOR
+
+    // window.open ABRE UMA NOVA ABA(JANELA)
+    // NO CASO ABRINDO A AULA ANTERIOR
+    function abreJanela() {
+        novJanela = window.open("44-desafioJogoForca.html", "_blank" , "width = 300px, height = 300px")  
+        // 2º PARAMETRO: TERGET _self ABRE A JANELA NA MESMA ABA, E O _blank EM UMA NOVA ABA
+        // 3º PARAMETRO: PROPRIEDADES DA NOVA JANELA, NO CASO ALTURA E LARGURA 
+    }
+
+    function fechaJanela() {
+        novJanela.close()
+        // .close FECHA A JANELA, NO CASO REFERENCIADA NA FUNÇÃO ANTERIOR
+    }
+
+    function abreTela() {
+        novTela = window.open("44-desafioJogoForca.html", "tela")  
+        // O SEGUNDO PARAMETRO É O NOME DO iframe QUE ESTA SENDO REFERENCIADO
+    }    
+ 
+</script>
+
+<body>
+    
+    <button onclick="abreTela()" > Abrir aula anterior na tela </button>
+    <button onclick="abreJanela()" > Abrir aula anterior em uma nova janela </button>
+    <button onclick="fechaJanela()" > Fechar a janela aberta </button>
+
+    <!-- O iframe SERVE PARA CRIAR UM TELA COM UM CONTEUDO NOVO OU UMA NOVA PAGINA NA MESMA ABA-->
+    <!-- NO CASO ESTÁ SENDO USADO COMO TARGET DO BOTÃO COM FUNCTION abreJanela() -->
+    <iframe name="tela" src="">  </iframe>
+
+</body>
+
+
+</html>

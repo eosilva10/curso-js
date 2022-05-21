@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 58</title>
+
+    <style>
+
+    </style>
+
+    <script>
+
+        // var a = document.createElement("a")
+        // var b = document.createElement("b")
+
+        // // DANDO CONTEUDO PARA O ELEMENTO p CRIADO ACIMA
+        // // MÉTODO 1
+        // a.textContent = " Texto exemplo 1 " 
+
+        // // MÉTODO 2
+        // var txt = document.createTextNode(" Texto exemplo 2 ")
+
+        function inicia() {
+        // PASSANDO O ELEMENTO CRIADO PRO BODY - MÉTODO 1
+        // document.body.appendChild(a)
+
+        // PASSANDO O ELEMENTO CRIADO PRO BODY - MÉTODO 2
+        // b.appendChild(txt)
+        // document.body.appendChild(b)
+
+            document.getElementById("btnAdd").addEventListener("click", function() {
+                var lista = document.getElementById("listaElementos")
+                var texto = document.getElementById("valorInput")
+                var li = document.createElement("li")
+
+                // INSERINDO O VALOR DO INPUT PARA O ELEMENTO RECEM CRIADO li
+                li.textContent = texto.value // .value PARA PEGAR O VALOR DO INPUT
+
+                lista.appendChild(li)
+
+                // DEIXANDO O CAMPO DO INPUT VAZIO APÓS A INSERÇÃO DE UM ITEM
+                texto.value = " "
+                // COLOCANDO O CURSOR FOCADO NO INPUT NOVAMENTE
+                texto.focus()
+
+            })
+
+        }
+
+        window.addEventListener("load", inicia)
+
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="valorInput">
+    <button id="btnAdd"> Adicionar </button>
+    <hr>
+
+    <ul id="listaElementos">
+
+    </ul>
+
+</body>
+</html>

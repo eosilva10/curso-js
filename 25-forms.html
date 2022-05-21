@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 25</title>
+
+    <style>
+
+        label {
+            display: block;
+        }
+
+        input {
+            display: block;
+        }
+
+        input [type = submit], label {
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <form name="Curso JS" id="curso-js" action="#" method="post">
+        <label> Nome </label>
+        <input type="text" name="form-nome" id="teste" value="Digite Seu Nome">
+        <label> Sobrenome </label>
+        <input type="text" name="form-sobrenome" id="teste" value="Digite Seu Sobrenome">
+        <label> Senha </label>
+        <input type="password" name="form-senha" value="123">
+        <input type="submit" name="btnEnviar" value="Enviar">
+    </form>
+
+    <!-- <form name="Curso PHP" id="curso-php" action="#" method="post">
+        <label> Nome </label>
+        <input type="text" name="form-nome" id="teste2" value="nome - 2">
+        <label> Senha </label>
+        <input type="password" name="form-senha" value="456">
+        <input type="submit" name="btnEnviar" value="Enviar">
+    </form> -->
+
+    <hr>
+
+</body>
+
+<script>
+
+    // formulario = document.forms[0].id // RETORNANDO O NUMERO DE FORMULARIOS NA PAGINA
+
+    // OUTRO MÉTODO PARA RETORNAR OS ITENS    
+    // formulario = document.forms.item(0).innerHTML // OU -> formulario = document.forms.namedItem("curso-js").id  
+    var formulario = document.forms["curso-js"].innerHTML // OU -> formulario = document.forms["curso-js"].innerHTML 
+    document.write(formulario) 
+
+    // RETORNANDO ELEMENTOS DO FORMULARIO
+    // elementosForms = document.forms["curso-php"].elements[1].value
+    // document.write(elementosForms)
+
+    document.write("<hr>")
+
+    var outroFormulario = document.forms[0]
+    
+    // MANIPULANDO APENAS UM ELEMENTO DO FORMS
+    // outroFormulario[0].style.backgroundColor = "#ddd" 
+
+    // MANIPULANDO APENAS UM ELEMENTO DO FORMS    
+    for (i = 0; i < outroFormulario.length -1; i++) {
+        outroFormulario[i].style.fontFamily = "Segoe UI light"
+        outroFormulario[i].style.fontSize = "20px"
+    }
+
+    // CAPTURANDO ELEMENTOS DO FORMULARIO PELO getElementById
+    document.write("<hr>")
+
+    document.write(document.getElementById("curso-js").elements[1].value)
+
+</script>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 13</title>
+
+    <script>
+
+        /*
+        nomes = ["pedro", "ana", "joao", "bruno", "luiza"]
+
+        nomes.sort() // .sort FAZ A ORDENAÇÃO DOS ELEMENTOS NO ARRAY EM ORDEM CRESCENTE
+        nomes.reverse() // .sort FAZ A ORDENAÇÃO DOS ELEMENTOS NO ARRAY EM ORDEM  DECRESCENTE
+
+        listaNomes = nomes.join() // .join JUNTA TODOS OS ELEMENTOS DE UM ARRAY SEPARADOS POR VIRGULA
+
+        document.write(nomes[0] + "<br>")
+        document.write(nomes[1] + "<br>")
+        document.write(nomes[2] + "<br>")
+        document.write(nomes[3] + "<br>")
+        document.write(nomes[4] + "<br>")
+
+        document.write(listaNomes)
+        */
+        
+        serieA = []
+        serieB = []
+
+        campeonato = []
+             
+        serieA.push("Palmeiras")
+        serieA.push("Santos")
+        serieA.push("São Paulo")
+        serieA.push("Corinthians")
+        serieA.push("Flamengo")
+        serieA.push("Internacional")
+        serieA.push("Atletico MG")
+        serieA.push("Fluminense")
+
+        serieB.push("Vasco")
+        serieB.push("Gremio")
+        serieB.push("Cruzeiro")
+        serieB.push("CSA")
+        serieB.push("Bahia")
+        serieB.push("Chapecoense")
+        serieB.push("Guarani")
+
+        campeonato = serieA.concat(serieB) // .concat JUNTA ELEMENTOS DE DOIS ARRAYS EM UM SÓ
+
+        document.write(campeonato)
+
+        document.write("<br><br>")
+
+        document.write("Quantidade de time da série A: " + serieA.length + "<br>") // .length RETORNO O TAMANHO(Nº DE ITENS) DO ARRAY
+        document.write("Quantidade de time da série B: " + serieB.length + "<br>")
+        document.write("Quantidade de time do campeonato: " + campeonato.length + "<br>")
+
+        // pos = serieA.indexOf("Palmeiras") // .indexOf RETORNA O INDICE QUE REPRESENTA DETERMINADO CONTEUDO
+
+        // // document.write(times.indexOf("Cruzeiro"))// QUANDO UM ITEM NÃO É ENCONTRADO NO ARRAY ELE É REPRESENTADO POR (-1)
+        
+        // if (pos < 0) {
+        //     document.write("Time não encontrado :/")
+        // } else {
+        //     document.write("Time encontrado na posição: " + pos)
+        // }
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

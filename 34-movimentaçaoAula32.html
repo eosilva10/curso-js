@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 34</title>
+
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            border: 3px solid rgb(17, 146, 163);
+            background-color: rgb(46, 86, 146);
+            position: absolute;
+            left: 0;
+            top: 0
+        }
+    </style>
+
+<script>
+
+    // VARIAVEIS DE DIREÇÃO
+    var dirx
+    var diry
+    // VARIAVEIS DE POSIÇAO
+    var posx
+    var posy
+
+    var velo
+    var obj
+    var tempo
+
+    function iniciar() {
+        dirx = 0
+        diry = 0
+        posx = 0
+        posy = 0
+        velo = 20
+        obj = document.getElementById("div1")
+        // EVENTOS PARA MOVER AS TECLAS
+        document.addEventListener("keydown", teclaPress)
+        document.addEventListener("keyup", teclaSolta)
+
+        tempo = setInterval(enterFrame, 20)
+    }
+
+    function teclaPress() {
+        var tecla = event.keyCode
+
+        if (tecla == 37) {
+            dirx =- 1
+        } else if (tecla == 38) {
+            diry =- 1
+        } else if (tecla == 39) {
+            dirx = 1
+        } else if (tecla == 40) {
+            diry = 1
+        }
+    }
+
+    function teclaSolta() {
+        var tecla = event.keyCode
+
+        if (tecla == 37) {
+            dirx = 0
+        } else if (tecla == 38) {
+            diry = 0
+        } else if (tecla == 39) {
+            dirx = 0
+        } else if (tecla == 40) {
+            diry = 0
+        }
+    }
+
+    function enterFrame() {
+        posx += dirx * velo
+        posy += diry * velo
+
+        obj.style.left = posx + "px"
+        obj.style.top = posy + "px"
+    }
+
+    window.addEventListener("load", iniciar)
+
+</script>
+
+    
+</head>
+<body>
+    
+    <div id="div1"></div>
+
+</body>
+
+</html>

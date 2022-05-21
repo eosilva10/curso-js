@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 24</title>
+
+    <style>
+
+        .titulo{
+            color: red;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        .par {
+            color: blue;
+        }
+
+        div {
+            border: 2px solid green;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        a {
+            display: block;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1 class="titulo"> AULA TESTE </h1>
+    <p>Esse é um texto de exemplo bla bla bla</p>
+    <h3 class="titulo">Subtitulo de exemplo</h3>
+    <p class="par">Esse é um outro texto de exemplo bla bla bla</p>
+    <p class="impar">Esse é mais um outro texto de exemplo bla bla bla</p>
+
+    <div>
+        <h4> Titulo da div </h4>
+        <p class="par">Esse texto está dentro de uma div</p>
+        <p class="impar">Esse também :/</p>
+    </div>
+
+    <a href="#" target="blank">link de teste</a> <br>
+    <a href="#">segundo link de teste</a>
+
+    <hr>
+
+</body>
+
+<script>
+        
+    // querySelectorAll TAMBÉM RETORNA OS ELEMENTOS PELAS TAGS PORÉM COM A VANTAGEM DE PEGAR ELEMENTOS PELA CLASSE    
+    pares = document.querySelectorAll("p.par")
+
+    pares[1].innerHTML = "Este é um novo texto"
+
+    for (i = 0; i < pares.length; i++) {
+        document.write(pares[i].innerHTML + "<br>")
+    }
+
+    // MUDANDO TAGS DENTRO DE TAGS
+    divisoria = document.querySelectorAll("div > p")
+
+    for (j = 0; j < divisoria.length; j++) {
+        divisoria[j].style.color = "green"
+    }   
+
+</script>
+
+</html>

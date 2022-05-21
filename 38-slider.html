@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 38</title>
+
+    <style>
+
+        #dvslider {
+            width: 1000px;
+            height: 300px;
+            border: 5px solid rgb(165, 155, 155);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btSlider {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 30%;
+            color: white;
+            cursor: pointer;
+            outline: none;
+            margin: 10px;
+            border: none;
+        }
+
+        #dvload {
+            width: 100%;
+            height: 5px;
+            margin-top: 25%;
+            border: 2px solid rgba(255, 255, 255, 0.3)
+        }
+
+        #dvbarra {
+            width: 0%;
+            height: 100%;
+            background-color: white;
+        }
+
+    </style>
+
+    <script>
+
+        var imgs = []
+        var slider
+        var imgAtual
+        var maxImg
+        var tempo
+        var vtempo
+        var vload
+
+        function preCarregamento() {
+            var s = 1
+
+            for (i = 0; i < 4; i++) {
+                
+            imgs[i] = new Image()
+            imgs[i].src = "imgs/s"+s+".jpg"
+            s++
+            }
+        }
+
+        function carregarImg(img) {
+            slider.style.backgroundImage = "url('"+imgs[img].src+"')"
+        }
+
+        function iniciar() {
+            preCarregamento()
+            imgAtual = 0
+            maxImg = imgs.length
+            slider = document.getElementById("dvslider")
+            carregarImg(imgAtual)
+            tempo = setInterval(troca, 2500)
+        }
+
+        function troca() {
+            imgAtual++
+            if (imgAtual > maxImg) {
+                imgAtual = 0
+            }
+            carregarImg(imgAtual)
+        }
+
+        window.addEventListener("load", iniciar)
+
+    </script>
+</head>
+<body>
+    
+    <div id="dvslider">
+        <button class="btSlider"> < </button>
+        <div id="dvload">
+            <div id="dvbarra">  </div>
+        </div>
+        <button class="btSlider"> > </button>
+    </div>
+
+</body>
+</html>

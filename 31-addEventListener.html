@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 31</title>
+
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgb(74, 9, 128);
+            background-color: rgb(105, 59, 230);
+            position: absolute;
+            left: 0;
+            top: 0
+        }
+    </style>
+
+<script>
+
+    function msg() {
+        alert(`Mensagem Teste`)
+    }        
+
+    function adicionarEventos() {    
+
+        // NESTE MÉTODO SE REMOVE O (on) DAS PALAVRAS DE EVENTOS(onclick, onmouse...) 
+        // E EM SEGUINDA O NOME DA FUNÇÃO SEM O () 
+        document.getElementById("div1").addEventListener("click", msg) 
+    }
+
+    window.addEventListener("load", adicionarEventos) 
+
+</script>
+    
+</head>
+<body>
+    
+    <div id="div1"></div>
+
+</body>
+
+</html>

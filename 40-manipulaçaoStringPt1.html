@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AULA 40</title>
+
+    <style>
+        
+
+
+    </style>
+    
+</head>
+<body>
+    
+    <p id="txt"> Teste - Curso de Javascript - Curso de HTML - curso de javascript </p>
+
+    <script>
+
+        let texto = document.getElementById("txt").innerHTML
+
+        //  match RETORNA UM TEXTO ESPECÍFICO NO VALOR SELECIONADO
+        let res = texto.match("Curso")
+
+        // SE O VALOR NÃO EXISTIR ELE REOTRNA NULO
+        let res2 = texto.match("bola")
+
+        let res3 = texto.match(/Curso/g) // /palavra/g <- RETORNA NÃO SÓ O PRIMERIO CASO ENCONTRADO, MAS TODAS AS PALAVRAS ENCOTRADAS E ACIONA EM UM ARRAY
+        let res4 = texto.match(/Javascript/ig) // /palavra/i <- RETORNA AS OCORRENCIAS SEM CASE SENSITIVE(MAIUSC. MINUSC.)
+
+        document.write(`${res} <br> ${res2} <hr>`)
+
+        // RETORNANDO O NUMERO DE ELEMENTOS ENCONTRADOS
+        document.write(`qtd de ocorrencias res3: ${res3.length} // palavras res4 encontradas: ${res4}`)
+        document.write(`<hr>`)
+
+        document.write(`lista de itens de palavras res4: <br>`)
+        for (i = 0; i < res4.length; i++) {
+            document.write(`${res4[i]} <br>`)
+        }
+
+        
+    
+    </script>
+
+</body>
+
+</html>
